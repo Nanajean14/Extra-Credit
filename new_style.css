@@ -11,20 +11,23 @@ h1,
 h2,
 p {
  color: white;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+ background-color: black;
 }
 
 button {
 
 color: #FFF;
-background-color: blue;
+background-color: lightblue;
 border: none;
 border-radius: 3px;
-padding: 10px;
+padding: 6px;
 margin-top: 40px
 }
 section {
-    opacity: 0.4;
-    filter: alpha(opacity=40); /* For IE8 and earlier */
- color: black;
+    width:350px;
+    float:left;
+    padding:10px;
 
-}
+
