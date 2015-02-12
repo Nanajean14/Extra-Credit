@@ -2,7 +2,8 @@ body {
 text-align: center;
 font-family: arial;
 font-size: 13px;
- background-image: url(http://40.media.tumblr.com/15e7597409b840cc20bd4de23f23e19a/tumblr_n4e0j6iBHs1sdyj9lo1_1280.jpg);
+ background-image: url(http://3.bp.blogspot.com/-Y-pGBtbq0WE/UkVQZJ3VSRI/AAAAAAAACX8/Y6of0wrMXls/s1600/cool+background+wallpapers++6.jpg);
+ background-attachment: fixed;
 }
 section{
 text-align: center;
@@ -23,4 +24,8 @@ border: none;
 border-radius: 3px;
 padding: 5px;
 margin-top: 40px
+}
+section {
+ color: black;
+ opacity: 50px;
 }
