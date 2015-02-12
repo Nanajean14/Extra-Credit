@@ -29,19 +29,6 @@ padding: 6px;
 margin-top: 500px;
 }
 
-img {
-    text-align: center;
-    position: absolute;
-    margin: auto;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-section {
-    width:900px;
-    float:center;
-    padding:100px;
-}
 
 img {
     image-orientation: from-image;
