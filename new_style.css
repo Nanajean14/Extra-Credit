@@ -3,7 +3,7 @@ text-align: center;
 font-family: arial;
 font-size: 13px;
  background-image: url(http://fc01.deviantart.net/fs17/f/2007/129/7/4/Stock_032__by_enchanted_stock.jpg);
- background-attachment: fixed;
+ background-repeat: no-repeat;
  display: block;
 }
 
@@ -28,6 +28,7 @@ border: none;
 border-radius: 3px;
 padding: 6px;
 margin-top: 500px;
+
 }
 
 
