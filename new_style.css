@@ -16,6 +16,11 @@ p {
 }
 
 button {
- background-color: blue;
- color: white;
+
+color: #FFF;
+background-color: blue;
+border: none;
+border-radius: 3px;
+padding: 5px;
+margin-top: 40px
 }
