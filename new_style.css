@@ -5,6 +5,8 @@ font-size: 13px;
  background-image: url(http://fc01.deviantart.net/fs17/f/2007/129/7/4/Stock_032__by_enchanted_stock.jpg);
  background-repeat: no-repeat;
  display: block;
+ color: #eee;
+    background-image: url("chrome://global/skin/media/imagedoc-darknoise.png");
 }
 
 
@@ -27,7 +29,8 @@ background-color: 	#00CCFF;
 border: none;
 border-radius: 3px;
 padding: 6px;
-margin-top: 500px;
+margin-top: 10px;
+width: 50px;
 
 }
 
