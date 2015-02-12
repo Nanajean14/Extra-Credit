@@ -14,14 +14,16 @@ p {
     opacity: 0.4;
     filter: alpha(opacity=40); /* For IE8 and earlier */
  background-color: black;
+ border: none;
+ border-radius: 100px;
 }
 
 button {
 
 color: #FFF;
-background-color: lightblue;
+background-color: 	#00CCFF;
 border: none;
-border-radius: 3px;
+border-radius: 20px;
 padding: 6px;
 margin-top: 40px
 }
