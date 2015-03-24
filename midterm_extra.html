@@ -16,68 +16,6 @@
 <link rel="stylesheet" type="text/css" href="/css/navbar.css?312e8ffcb67fff19e4250da33ce88f37">
 <link rel="stylesheet" type="text/css" href="/css/fontello.css?771fe191ab4a39b9fe817ca05218b727">
 
-<!-- JS INCLUDES -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script type="text/javascript">
-  var AWS_UPLOAD_HTTP_PATH = "https://s3.amazonaws.com/massdropinc/";
-  var AWS_CDN_IMG_PATH = "https://d2qmzng4l690lq.cloudfront.net/";
-  var WEB_ROOT_ABS = "/";
-  var WEB_ROOT_URI = "https://www.massdrop.com/";
-  var IS_ADMIN = 0;
-  window.JC = window.JC || {};
-</script>
-<script src="/js/compiled.js?d113d6fca7e5bb90dfe2163982f1fe9f"></script>
-<script src="/js/app.js?3bde5b007d91f1ffe2de1bae5734ef91"></script>
-<script src="/js/site.js?f1251a8e60a0d236bac277e39c366df9"></script>
-<script type="text/javascript">
-  !function(a,b){a("Keen","https://d26b395fwzu5fz.cloudfront.net/3.2.2/keen.min.js",b)}(function(a,b,c){var d,e,f;c["_"+a]={},c[a]=function(b){c["_"+a].clients=c["_"+a].clients||{},c["_"+a].clients[b.projectId]=this,this._config=b},c[a].ready=function(b){c["_"+a].ready=c["_"+a].ready||[],c["_"+a].ready.push(b)},d=["addEvent","setGlobalProperties","trackExternalLink","on"];for(var g=0;g<d.length;g++){var h=d[g],i=function(a){return function(){return this["_"+a]=this["_"+a]||[],this["_"+a].push(arguments),this}};c[a].prototype[h]=i(h)}e=document.createElement("script"),e.async=!0,e.src=b,f=document.getElementsByTagName("script")[0],f.parentNode.insertBefore(e,f)},this);
-</script>
-<script type="text/javascript">
-  var keen_page_start_time = new Date();
-
-
-
-
-<!-- FACEBOOK -->
-<div id="fb-root"></div>
-<script type="text/javascript">
-  window.fbAsyncInit = function () {
-    FB.init({
-      appId: '142386762546138',
-      channelUrl: 'https://www.massdrop.com/html/channel.html',
-      status: true,
-      cookie: true,
-      xfbml: true
-    });
-    FB.Event.subscribe('edge.create', function (url) {
-      _gaq.push(['_trackSocial', 'facebook', 'like', url]);
-    });
-    FB.Event.subscribe('edge.remove', function (url) {
-      _gaq.push(['_trackSocial', 'facebook', 'unlike', url]);
-    });
-    FB.Event.subscribe('message.send', function (url) {
-      _gaq.push(['_trackSocial', 'facebook', 'send', url]);
-    });
-  };
-  (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {
-      return;
-    }
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-  function facebookLogin() {
-    FB.login(function (response) {
-      if (response.authResponse) window.location.href = location.pathname + "?fb=link";
-    }, {scope: 'email,user_about_me,user_location,user_likes,publish_actions'});
-  }
-</script>
-
-
-
 <!-- WEB FONT STUFF -->
 <script src="//use.typekit.net/ojz2okb.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
@@ -118,7 +56,7 @@
 
   .cover {
     position: absolute;
-    height: 100%;
+    height: 50%;
     background: url('https://d2qmzng4l690lq.cloudfront.net/resizer/x300/img_site/landing_page/20140915/landing.jpg?q=70') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -146,154 +84,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  .splash-btn {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-color: #00a4ca;
-    padding: 8px 20px;
-    width: 220px;
-    color: #ffffff;
-    text-align: center;
-    margin: 10px 0 20px 0;
-    display: -moz-inline-stack;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    position: relative;
-    border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    font-size: 12px;
-  }
-
-  .splash-btn.loading::before {
-    content: 'Loading';
-    color: #555555;
-    background: url('https://d2qmzng4l690lq.cloudfront.net/resizer/img_site/ajax-loader.gif') no-repeat center;
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    width: 220px;
-  }
-
-  .splash-btn:hover {
-    background-color: #0086a5;
-  }
-
-  .splash-btn:active {
-    background-color: #ffffff;
-    color: #0086a5;
-  }
-
-  input.splash-input {
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box; /* Firefox, other Gecko */
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.75);
-    color: black;
-    border: none;
-    padding: 8px;
-    outline: none;
-    border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    margin-bottom: 3px;
-    position: relative;
-    box-shadow: none;
-    width: 220px;
-    -webkit-transition: background-color 0.1s;
-    transition: background-color 0.1s;
-  }
-
-  input.splash-input:focus {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: black;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .splash-input.error {
-    border: 1px solid red;
-  }
-
-  .splash-btn.loading {
-    background-color: #d9d9d9;
-    position: relative;
-    text-indent: -9000px;
-    pointer-events: none;
-    cursor: default;
-  }
-
-  .sign-up-prompt {
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-  }
-
-  .sign-up-row {
-    display: -moz-inline-stack;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-  }
-
-  .sign-in-prompt {
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-
-  .sign-in-prompt a {
-    font-weight: 600;
-  }
-
-  .agreement {
-    font-size: 12px;
-    opacity: 0.5;
-  }
-
-  .bottom-bar a {
-    text-decoration: none;
-  }
-
-  .bottom-bar a:hover {
-    text-decoration: underline;
-  }
-
-  .agreement a {
-    color: inherit;
-  }
-
-  input.splash-input::-webkit-input-placeholder {
-    color: rgb(112, 112, 112);
-    font-style: normal;
-    letter-spacing: 0.2px;
-  }
-
-  input.splash-input.placeholder {
-    color: rgb(112, 112, 112);
-    font-style: normal;
-    letter-spacing: 0.2px;
-  }
-
-  input.splash-input:-moz-placeholder {
-    color: rgb(112, 112, 112);
-    font-style: normal;
-    letter-spacing: 0.2px;
-  }
-
-  p.isok {
-    margin-bottom: 0;
-    float: left;
-  }
+ 
 
   .title-container {
     padding-top: 30px;
@@ -362,13 +153,6 @@
     </div>
 
     <div class="bottom-bar">
-      <!-- STEP 1 -->
-      <form id="Signup_Step_1" action="#" class="sign-up">
-        <div class="sign-up-row" style="display: inline-block;">
-          <div>
-            <input type="email" class="splash-input email" placeholder="Email" name="email"/>
-            <p class="isok"></p>
-          </div>
           <div style="display: none;" class="splash-error error"></div>
           <button class="splash-btn">START NOW!</button>
         </div>
@@ -376,103 +160,11 @@
 
 
       <!-- OTHER SIGN IN METHODS -->
-      <p>It;s easy if you know your HTML and CSS</p>
+     
       <div class="sign-in-prompt">It's easy if you know your <a href="#" onclick="facebookLogin();return false;">HTML</a> and <a href="#" class="sign-in-trigger">CSS</a></div>
       <p>Due Week 6.</p>
-      <div class="agreement">By clicking “Sign Up” you accept our
-        <a href="/terms-of-service" target="_blank">Terms</a> and
-        <a href="/privacy" target="_blank">Privacy Policy</a>.
-      </div>
-     
-</div>
-
-
-<!-- iframe hack for saving passwords	-->
-<iframe name="form-target" id="form-target" src="/html/blank.html" frameborder="0" width="0" height="0" style="display: none; visibility: hidden;"></iframe>
-<form action="" style="display: none; visibility: hidden;" method="post">
-  <input name='email' id='autocomplete-email' type='email'/>
-  <input name='password' id='autocomplete-password' type='password'/>
-</form>
-
-<!-- sign in modal -->
-<script id='tpl-signin' type='text/html'>
-  <div id="sign-in-modal">
-    <header class='modal-header'>
-      <h1>Sign In to Massdrop</h1>
-    </header>
-    <div class='modal-content column-box'>
-      <div class='col-50'>
-        <form action='/html/blank.html' class='single-column-form' target='form-target' method="post">
-          <h2>Sign in with your email</h2>
-          <div class="error-form form-messages" style="display:none;"></div>
-          <div class='form-field full-width'>
-            <label class='visuallyhidden' for='sign-in-email'>Email</label>
-            <input class='required email' name='email' id='sign-in-email' placeholder='Email' type='email'/>
-          </div>
-          <div class='form-field full-width'>
-            <label class='visuallyhidden' for='sign-in-password'>Password</label>
-            <input class='required' name='password' id='sign-in-password' placeholder='Password' type='password'/>
-          </div>
-          <div class='form-actions'>
-            <button class='btn btn-submit ico-btn ico-save' type='submit'>Sign In</button>
-            <a href='#' class="password-reset">Forgot Password?</a>
-          </div>
-        </form>
-      </div>
-      <div class='col-50 connect-options'>
-        <h2>Have a Facebook Account?</h2>
-        <a class='btn btn-facebook ico-btn ico-facebook-btn' href="#" onclick="facebookLogin();return false;">Sign In with Facebook</a>
-      </div>
-    </div>
-    <footer class='modal-footer alternative-action'>
-      Not a Member?
-      <a class='sign-up-link' href=''>Sign Up</a>
-    </footer>
-  </div>
-</script>
-
-
-<!-- sign up modal -->
-<script id='tpl-signup-no-diagram' type='text/html'>
-  <div id="sign-up-modal" style="overflow: hidden;">
-    <header class='modal-header'>
-      <h1>Sign Up for Massdrop</h1>
-    </header>
-    <div class='modal-content column-box' style="padding-top:15px">
-      <div class='col-50'>
-        <form action='' class='single-column-form' method="post">
-          <h2>Sign up with your Email</h2>
-          <div class="error-form form-messages" style="display:none;"></div>
-          <div class='form-field full-width'>
-            <label class='visuallyhidden' for='sign-up-email'>Email</label>
-            <input class='required email' name='email' id='sign-up-email' placeholder='Email' type='email'/>
-          </div>
-          <div class='form-field full-width' style="margin-bottom:0;">
-            <label class='visuallyhidden' for='sign-up-password'>Password</label>
-            <input class='required' name='password' id='sign-up-password' placeholder='Password' type='password'/>
-          </div>
-          <div class='form-field full-width' style="margin:12px 0 10px;color:#999999">
-            We will <span style="font-weight:bold;">never</span> spam you, or sell your email to third parties.
-          </div>
-          <div class='form-actions'>
-            <button class='btn btn-submit ico-btn ico-save' type='submit'>Sign Up</button>
-          </div>
-        </form>
-      </div>
-      <div class='col-50 connect-options'>
-        <h2>Have a Facebook Account?</h2>
-        <a class='btn btn-facebook ico-btn ico-facebook-btn ab' data-ab="fb_modal" href="#" onclick="facebookLogin();return false;">Sign In with Facebook</a>
-        <div class='facebook-facepile'>
-          <div class="fb-like" data-href="https://www.facebook.com/massdrop" data-send="false" data-width="255" data-show-faces="true"></div>
-        </div>
-      </div>
-    </div>
-    <footer class='modal-footer alternative-action'>
-      Already a Member?
-      <a class='sign-in-link' href=''>Sign In</a>
-    </footer>
-  </div>
-</script>
+      
+    
 <!-- order-placed modal -->
 <script id='tpl-msg' type='text/html'>
   <div id="msg-modal" style="width:600px">
